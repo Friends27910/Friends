@@ -4,7 +4,7 @@ const path = require("path")
 const hbs = require("hbs")
 const hbsFile = path.join(__dirname,"Hbs")
 const signupdata = require("./Mongodb.js")
-const PORT = 2009;
+const PORT = process.env.PORT || 2009;
 app.use(express.static("Css"))
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))

@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:false}))
 app.set("view engine","hbs")
 app.set("views",hbsFile)
 app.get("/",(req,res) => {
-  res.render("Login")
+  res.render("Home")
 })
 
 app.get("/signup",(req,res) =>{
@@ -26,6 +26,9 @@ app.post("/signup",async (req,res) =>{
   }
   await signupdata.insertMany([data]);
   res.render("Home")
+})
+app.get("/Login",(req,res) => {
+  res.render("Login")
 })
 app.post("/login",async(req,res) =>{
 try {

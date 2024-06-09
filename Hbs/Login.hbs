@@ -12,9 +12,12 @@
   <div class="container">
     <div class="login form">
       <header>Login</header>
-      <form  method="post">
-        <input type="text" placeholder="username" name="username">
-        <input type="password" placeholder="Enter your password" name="password">
+                {{#if msg}}
+          <p class="{{msg_type}}">{{msg}}</p>
+          {{/if}}
+      <form action="/login" method="post">
+        <input autocapitalize="none" type="text" placeholder="username" name="username">
+        <input autocapitalize="none" type="password" placeholder="Enter your password" name="password">
     
         <input type="submit" class="button" value="Login">
       </form>

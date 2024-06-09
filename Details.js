@@ -13,7 +13,8 @@ const data = new mongoose.Schema({
     type:Date,
     default:Date.now(),
     immutable:true
-  }
+  },
+  token:String,
 })
 const usersData = new mongoose.model("Users Data",data)
 module.exports = usersData

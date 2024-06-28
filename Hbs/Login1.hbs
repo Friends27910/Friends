@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <title>Sign up</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    <link rel="stylesheet" href="./Style1.css">
 </head>
 <body>
-    
+
   <div class="container">
+
     <div class="login form">
-          <header>Signup</header>
+                  <header>Sign up</header>
           {{#if msg}}
                  <p class="{{msg_type}}">{{msg}}</p>
           {{/if}}
       <form method="post" id="signupform" action="/signup">
-        <input type="text"autocapitalize="none" placeholder="Enter your name" name="name">
+        <input   type="text"autocapitalize="none" placeholder="Enter your name" name="name">
         <input type="text" autocapitalize="none" placeholder="Enter your username" name="username">
-        <input type="password" autocapitalize="none" placeholder="Enter your password" name="password">
-        <input type="submit" class="button" >
+        <div  id="password">
+   <input type="password" autocapitalize="none" placeholder="Enter your password" name="password" id="Pass">  
+   <div class="btn">
+        <input type="button" id="btn" onclick="sho()" value="Show" >
+   </div>
+
+        </div>
+
+       <input   type="text" autocapitalize="none" placeholder="Confirm your password" name="confirmpassword">
+       <div data-aos="slide-in">
+           <input type="submit" class="button">
+       </div>
+      
       </form>
       <div class="signup">
         <span class="signup">Already have an account?
@@ -31,5 +44,21 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./Validation.js"></script>
+<script>
+  
+  function sho(){
+    let password = document.getElementById("Pass");
+    if(password.type==="password"){
+      password.type = "text"
+    }else{
+      password.type="password"
+    }
+  }
+</script>
 </body>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

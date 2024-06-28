@@ -8,10 +8,14 @@ $(document).ready(function(){
       username:{
         required:true,
         minlength:5,
+        unique:true,
         
       },
       password:{
         minlength:6,
+        required:true,
+      },
+      confirmpassword:{
         required:true,
       }
     }

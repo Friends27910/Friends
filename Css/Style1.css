@@ -52,7 +52,6 @@ body{
    border: 1px solid #ddd;
    border-radius: 6px;
    outline: none;
-   text-transform: lowercase;
  }
  .form input:focus{
    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
@@ -97,4 +96,17 @@ body{
   color: orange;
   font-weight: bold;
   text-align: center;
+}
+#btn{
+  margin: 15px;
+  text-align: center;
+  color:black;
+  border: none;
+  font-size: 20px;
+  background:none;
+}
+                
+
+#password{
+  display: flex;
 }
